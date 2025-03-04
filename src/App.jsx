@@ -1,10 +1,9 @@
+import AppRouter from "./router/AppRouter.jsx";
+import "./assets/styles/main.scss";
+
 const App = () => {
   return (
-    <>
-      <div>
-        Mon application
-      </div>
-    </>
+    <AppRouter />
   );
 }
 

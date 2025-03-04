@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+@import "reset";
+@import "mixins";
+@import "variables";
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+a {
+  color: #000;
+
+  &.active {
+    text-decoration: underline;
+  }
+}
