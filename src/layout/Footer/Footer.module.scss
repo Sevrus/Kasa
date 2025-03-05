@@ -1,0 +1,42 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 209px;
+  background-color: #000;
+
+  &__logo img {
+    width: 122px;
+  }
+
+  &__copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    gap: 25px;
+
+    &__copyright {
+      flex-direction: row;
+      font-size: 16px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .footer {
+    gap: 40px;
+
+    &__copyright {
+      font-size: 24px;
+    }
+  }
+}
