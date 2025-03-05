@@ -15,3 +15,33 @@
     font-size: 12px;
   }
 }
+
+@media (min-width: 768px) {
+  .header {
+    margin: 35px 60px 40px;
+
+    &__logo img {
+      width: 170px;
+    }
+
+    &__nav {
+      gap: 37px;
+      font-size: 16px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .header {
+    margin: 45px 100px 50px;
+
+    &__logo img {
+      width: 210px;
+    }
+
+    &__nav {
+      gap: 57px;
+      font-size: 24px;
+    }
+  }
+}
