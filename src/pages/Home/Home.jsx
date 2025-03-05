@@ -1,6 +1,14 @@
+import Banner from "../../components/Banner/Banner.jsx";
+import image from "../../assets/images/home_banner.jpg";
+
 const Home = () => {
     return (
-        <div>Home</div>
+        <>
+            <Banner
+                image={image}
+                alt="Une côte escarpée plongeant dans une mer calme."
+            />
+        </>
     );
 }
 
