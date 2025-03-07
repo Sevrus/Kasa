@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
 
   &__content {
     flex: 1;
