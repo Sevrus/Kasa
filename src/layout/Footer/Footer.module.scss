@@ -1,8 +1,8 @@
+@use "../../assets/styles/base/variables" as *;
+@use "../../assets/styles/base/mixins" as *;
+
 .footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include flex(column, center, center);
   flex-shrink: 0;
   gap: 10px;
   height: 209px;
@@ -13,11 +13,9 @@
   }
 
   &__copyright {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #fff;
-    font-size: 12px;
+    @include flex(column, null, center);
+    color: $tertiary;
+    font-size: 0.75rem;
   }
 }
 
@@ -27,7 +25,7 @@
 
     &__copyright {
       flex-direction: row;
-      font-size: 16px;
+      font-size: 1rem;
     }
   }
 }
@@ -37,7 +35,7 @@
     gap: 40px;
 
     &__copyright {
-      font-size: 24px;
+      font-size: 1.5rem;
     }
   }
 }

@@ -1,6 +1,7 @@
+@use "../../assets/styles/base/mixins" as *;
+
 .layoutContainer {
-  display: flex;
-  flex-direction: column;
+  @include flex(column, null, null);
   height: 100vh;
   max-width: 1440px;
   margin: 0 auto;

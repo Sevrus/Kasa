@@ -1,0 +1,64 @@
+@use '../base/mixins' as *;
+@use '../base/variables' as *;
+
+.notFound-container {
+  height: 100%;
+  @include flex(column, center, center);
+  gap: 113px;
+  text-align: center;
+  margin: 0 58px;
+
+  &__title {
+    font-size: 6rem;
+    font-weight: $bolder;
+    color: $primary;
+  }
+
+  &__message {
+    font-size: 1.125rem;
+    font-weight: $medium;
+    color: $primary;
+  }
+
+  &__link {
+    font-size: 0.875rem;
+    font-weight: $medium;
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: $tablet) {
+  .notFound-container {
+    margin: 0 60px;
+
+    &__title {
+      font-size: 10rem;
+    }
+
+    &__message {
+      font-size: 1.5rem;
+    }
+
+    &__link {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .notFound-container {
+    margin: 0 100px;
+
+    &__title {
+      font-size: 18rem;
+    }
+
+    &__message {
+      font-size: 2.25rem;
+    }
+
+    &__link {
+      font-size: 1.125rem;
+    }
+  }
+}

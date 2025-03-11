@@ -5,9 +5,9 @@ import logo from "../../assets/images/logo.svg";
 const Header = () => {
     return (
         <header className={styles.header}>
-            <div className={styles.header__logo}>
+            <NavLink to="/" className={styles.header__logo}>
                 <img src={logo} alt="Le logo su site"/>
-            </div>
+            </NavLink>
             <nav className={styles.header__nav}>
                 <NavLink to="/" end>Accueil</NavLink>
                 <NavLink to="/about" end>À propos</NavLink>
