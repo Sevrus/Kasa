@@ -26,7 +26,7 @@ const AppRouter = () => {
                     }
                 />
                 <Route
-                    path="/rental-details"
+                    path="/rental/:id"
                     element={
                         <MainLayout>
                             <RentalDetails />
