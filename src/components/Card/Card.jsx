@@ -32,21 +32,21 @@ const Card = () => {
 
 
     return (
-        <div className={styles.container}>
+        <div className={styles["container"]}>
             {datas &&
                 datas.map((item) => (
                     <figure
-                        className={styles.container__card}
-                        key={item.id}
-                        onClick={() => handleCardClick(item.id)}
+                        className={styles["container__card"]}
+                        key={item["id"]}
+                        onClick={() => handleCardClick(item["id"])}
                     >
                         <img
-                            className={styles.container__card__image}
-                            src={item.cover}
-                            alt={item.title}
+                            className={styles["container__card__image"]}
+                            src={item["cover"]}
+                            alt={item["title"]}
                         />
                         <figcaption
-                            className={styles.container__card__text}>{item.title}
+                            className={styles["container__card__text"]}>{item["title"]}
                         </figcaption>
                     </figure>
                 ))}

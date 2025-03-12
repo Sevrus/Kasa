@@ -31,7 +31,24 @@ const RentalDetails = () => {
 
 
     return (
-        <Slideshow pictures={rental.pictures} />
+        <>
+            <Slideshow pictures={rental["pictures"]} />
+
+            <div className="rental-container">
+                <section className="rental-container__details">
+                    <h1 className="rental-container__details__title">{rental["title"]}</h1>
+                    <p className="rental-container__details__location">{rental["location"]}</p>
+                    <div className={"rental-container__details__tags"}>
+                        {rental["tags"].map((tag) => (
+                            <span key={tag}>{tag}</span>
+                        ))}
+                    </div>
+                </section>
+                <div>
+
+                </div>
+            </div>
+        </>
     );
 }
 

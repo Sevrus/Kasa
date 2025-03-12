@@ -2,8 +2,9 @@
 @use "base/mixins" as *;
 @use "base/variables" as *;
 
-@import "pages/about";
-@import "pages/notFound";
+@use "pages/about";
+@use "pages/notFound";
+@use "pages/rentalDetails";
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 

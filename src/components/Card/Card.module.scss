@@ -2,7 +2,7 @@
 @use '../../assets/styles/base/mixins' as *;
 
 .container {
-  margin: 0 20px 27px;
+  margin-bottom: 27px;
   @include flex(column, center, null);
   min-height: 255px;
   gap: 20px;
@@ -32,7 +32,7 @@
 
 @media (min-width: 768px) {
   .container {
-    margin: 0 60px 37px;
+    margin-bottom: 37px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
@@ -41,7 +41,7 @@
 
 @media (min-width: 992px) {
   .container {
-    margin: 0 100px 47px;
+    margin-bottom: 47px;
   }
 }
 

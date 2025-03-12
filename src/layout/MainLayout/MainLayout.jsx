@@ -4,9 +4,9 @@ import Footer from "../Footer/Footer.jsx";
 
 const MainLayout = ({children}) => {
     return (
-        <div className={styles.layoutContainer}>
+        <div className={styles["layoutContainer"]}>
             <Header />
-            <main className={styles.layoutContainer__content}>{children}</main>
+            <main className={styles["layoutContainer__content"]}>{children}</main>
             <Footer />
         </div>
     );
