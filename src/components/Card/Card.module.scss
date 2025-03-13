@@ -5,17 +5,20 @@
   margin-bottom: 27px;
   @include flex(column, center, null);
   min-height: 255px;
+  width: 100%;
   gap: 20px;
 
   &__card {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    height: 100%;
 
     &__image {
-      max-width: 100%;
+      width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center;
       display: block;
     }
 

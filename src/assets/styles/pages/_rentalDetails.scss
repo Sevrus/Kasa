@@ -1,20 +1,31 @@
 @use '../base/variables' as *;
+@use '../base/mixins' as *;
 
 .rental-container {
+  @include flex(column, null, null);
+  gap: 16px;
+  margin-bottom: 13px;
+
   &__details {
     &__title {
       font-size: 1.125rem;
       font-weight: $medium;
       color: $primary;
+      margin-bottom: 10px;
     }
 
     &__location {
       font-size: 0.875rem;
       font-weight: $medium;
       color: $secondary;
+      margin-bottom: 10px;
     }
 
     &__tags {
+      @include flex(null, null, center);
+      flex-wrap: wrap;
+      gap: 10px;
+
       span {
         background-color: $primary;
         color: $tertiary;
@@ -24,5 +35,86 @@
         padding: 5px 20px;
       }
     }
+  }
+
+  &__rating-agent {
+    @include flex(null, space-between, center);
+    gap: 10px;
+
+    &__agent {
+      @include flex(null, flex-end, center);
+      gap: 10px;
+
+      h3 {
+        width: 50px;
+        font-size: 0.75rem;
+        font-weight: $medium;
+        color: $primary;
+        text-align: right;
+      }
+
+      img {
+        width: 32px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.collapse-container {
+  @include flex(column, null, null);
+  gap: 20px;
+  margin-bottom: 27px;
+}
+
+@media (min-width: 992px) {
+  .rental-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+
+    &__details {
+      &__title {
+        font-size: 2.25rem;
+      }
+
+      &__location {
+        font-size: 1.125rem;
+      }
+
+      &__tags {
+        span {
+          padding: 5px 40px;
+          font-size: 0.875rem;
+        }
+      }
+    }
+
+    &__rating-agent {
+      flex-direction: column-reverse;
+      align-items: flex-end;
+      gap: 20px;
+
+      &__agent {
+        h3 {
+          font-size: 1.125rem;
+          width: 100px;
+        }
+
+        img {
+          width: 64px;
+        }
+      }
+    }
+  }
+
+  .collapse-container {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 76px;
+    margin: 0 0 50px;
   }
 }

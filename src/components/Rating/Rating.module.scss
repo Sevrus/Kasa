@@ -1,5 +1,21 @@
-.rating {
-  &__star {
+@use "../../assets/styles/base/variables" as *;
+@use "../../assets/styles/base/mixins" as *;
 
+.rating {
+  @include flex(null, null, null);
+  gap: 8px;
+
+  &__star {
+    width: 14px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .rating {
+    gap: 18px;
+
+    &__star {
+      width: 25px;
+    }
   }
 }

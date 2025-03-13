@@ -10,6 +10,19 @@ const Collapse = ({title, content}) => {
         setIsOpen(!isOpen);
     }
 
+    const renderContent = () => {
+        if (Array.isArray(content)) {
+            return (
+                <ul>
+                    {content.map((item, index) => (
+                        <li key={index}>{item}</li>
+                    ))}
+                </ul>
+            );
+        }
+        return content;
+    };
+
     return (
         <div className={styles["container"]}>
             <div
@@ -32,7 +45,7 @@ const Collapse = ({title, content}) => {
                 ref={contentRef}
             >
                 <div className={styles["container__content__inner"]}>
-                    {content}
+                    {renderContent()}
                 </div>
             </div>
         </div>

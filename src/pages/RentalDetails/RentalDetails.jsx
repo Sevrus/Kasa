@@ -3,6 +3,7 @@ import {useEffect, useState} from "react";
 import fetchData from "../../services/fetchData.js";
 import Slideshow from "../../components/Slideshow/Slideshow.jsx";
 import Rating from "../../components/Rating/Rating.jsx";
+import Collapse from "../../components/Collapse/Collapse.jsx";
 
 const RentalDetails = () => {
     const {id} = useParams();
@@ -38,17 +39,24 @@ const RentalDetails = () => {
             <div className="rental-container">
                 <section className="rental-container__details">
                     <h1 className="rental-container__details__title">{rental["title"]}</h1>
-                    <p className="rental-container__details__location">{rental["location"]}</p>
+                    <h2 className="rental-container__details__location">{rental["location"]}</h2>
                     <div className={"rental-container__details__tags"}>
                         {rental["tags"].map((tag) => (
                             <span key={tag}>{tag}</span>
                         ))}
                     </div>
                 </section>
-                <div>
-                    <Rating rating={rental["rating"]}/>
-                    <div></div>
+                <div className={"rental-container__rating-agent"}>
+                    <Rating rating={rental["rating"] || 0}/>
+                    <div className="rental-container__rating-agent__agent">
+                        <h3>{rental["host"]["name"]}</h3>
+                        <img src={rental["host"]["picture"]} alt={rental["detail"]}/>
+                    </div>
                 </div>
+            </div>
+            <div className="collapse-container">
+                <Collapse title="Description" content={rental["description"]} />
+                <Collapse title="Équipements" content={rental["equipments"]} />
             </div>
         </>
     );

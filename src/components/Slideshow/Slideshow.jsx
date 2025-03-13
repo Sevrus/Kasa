@@ -16,24 +16,37 @@ const Slideshow = ({pictures}) => {
     if (!pictures || pictures.length === 0) {
         return null;
     }
+
     if (pictures.length === 1) {
         return (
             <div className={styles["slideshow"]}>
                 <img
                     src={pictures[0]}
                     alt=""
-                    className={styles["slideshow__image"]}
+                    className={`${styles["slideshow__image"]} ${styles["slideshow__image--active"]}`
+                    }
                 />
             </div>
         );
     }
+
     return (
         <div className={styles["slideshow"]}>
-            <img
-                src={pictures[currentIndex]}
-                alt=""
-                className={styles["slideshow__image"]}
-            />
+            {pictures.map((picture, index) => {
+                const isActive = index === currentIndex;
+                const isPrev = (index === (currentIndex - 1 + pictures.length) % pictures.length);
+
+                return (
+                    <img
+                        key={index}
+                        src={picture}
+                        alt=""
+                        className={`${styles["slideshow__image"]} 
+                            ${isActive ? styles["slideshow__image--active"] : ""} 
+                            ${isPrev ? styles["slideshow__image--prev"] : ""}`}
+                    />
+                );
+            })}
             <button
                 className={`${styles["slideshow__button"]} ${styles["slideshow__button--prev"]}`}
                 onClick={prevImage}
