@@ -2,6 +2,7 @@ import {useParams} from "react-router";
 import {useEffect, useState} from "react";
 import fetchData from "../../services/fetchData.js";
 import Slideshow from "../../components/Slideshow/Slideshow.jsx";
+import Rating from "../../components/Rating/Rating.jsx";
 
 const RentalDetails = () => {
     const {id} = useParams();
@@ -45,7 +46,8 @@ const RentalDetails = () => {
                     </div>
                 </section>
                 <div>
-
+                    <Rating rating={rental["rating"]}/>
+                    <div></div>
                 </div>
             </div>
         </>
