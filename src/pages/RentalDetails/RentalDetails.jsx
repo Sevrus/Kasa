@@ -1,4 +1,4 @@
-import {useParams} from "react-router";
+import {useNavigate, useParams} from "react-router";
 import {useEffect, useState} from "react";
 import fetchData from "../../services/fetchData.js";
 import Slideshow from "../../components/Slideshow/Slideshow.jsx";
@@ -7,6 +7,7 @@ import Collapse from "../../components/Collapse/Collapse.jsx";
 
 const RentalDetails = () => {
     const {id} = useParams();
+    const navigate = useNavigate();
     const [rental, setRental] = useState(null);
     const [error, setError] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
@@ -20,13 +21,14 @@ const RentalDetails = () => {
                 if (foundRental) {
                     setRental(foundRental);
                 } else {
-                    setError("Appartement introuvable.");
+                    navigate("/404");
                 }
             })
             .catch((err) => {
-                console.error("Erreur pendant la récupération :", err.message || err);
+                console.error("Erreur lors de la récupération des données :", err.message || err);
+                setError("Impossible de charger les détails du logement. Réessayez ultérieurement.");
             });
-    }, [id]);
+    }, [id, navigate]);
 
     if (isLoading) return <p>Chargement des détails...</p>;
     if (error) return <p>Erreur : {error}</p>;
