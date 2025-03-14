@@ -1,6 +1,12 @@
 import logo from "../../assets/images/logo_footer.svg";
 import styles from './Footer.module.scss';
 
+/**
+ * Renders the footer of the application with a logo and copyright information.
+ * Displays static branding and ownership details.
+ *
+ * @returns {JSX.Element} The footer component.
+ */
 const Footer = () => {
     return (
         <footer className={styles["footer"]}>

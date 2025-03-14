@@ -2,6 +2,15 @@ import {useRef, useState} from "react";
 import styles from "./Collapse.module.scss";
 import chevron from "../../assets/images/chevron.svg";
 
+/**
+ * Renders a collapse/accordion component with a title and expandable content.
+ * Allows toggling visibility of the content when the header is clicked.
+ *
+ * @param {object} props - The properties passed to the component.
+ * @param {string} props.title - The title displayed on the collapse header.
+ * @param {string|string[]} props.content - The content to display when the collapse is open. Can be a string or an array of strings.
+ * @returns {JSX.Element} The collapse component.
+ */
 const Collapse = ({title, content}) => {
     const [isOpen, setIsOpen] = useState(false);
     const contentRef = useRef(null);

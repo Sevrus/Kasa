@@ -4,6 +4,13 @@ import styles from './Card.module.scss';
 import {useNavigate} from "react-router";
 import Loader from "../Loader/Loader.jsx";
 
+/**
+ * Fetches and displays a list of rental cards based on JSON data. Each card
+ * includes an image, title, and navigates to a detailed rental page when clicked.
+ * Shows a `Loader` while data is loading and handles errors gracefully.
+ *
+ * @returns {JSX.Element} A list of rental cards or a loading/error message.
+ */
 const Card = () => {
     const [datas, setDatas] = useState([]);
     const [error, setError] = useState(null);

@@ -5,6 +5,13 @@ import About from "../pages/About/About.jsx";
 import RentalDetails from "../pages/RentalDetails/RentalDetails.jsx";
 import NotFound from "../pages/NotFound/NotFound.jsx";
 
+/**
+ * Configures and manages the application's routing.
+ * Defines routes for the homepage, "About" page, rental details, and a 404 page.
+ * Wraps all routes with the main layout.
+ *
+ * @returns {JSX.Element} The router with defined routes.
+ */
 const AppRouter = () => {
     return (
         <BrowserRouter>

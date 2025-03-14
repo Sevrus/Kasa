@@ -3,6 +3,12 @@ import image from "../../assets/images/about_banner.jpg";
 import Collapse from "../../components/Collapse/Collapse.jsx";
 import collapseData from "../../data/collapseData.js";
 
+/**
+ * Displays the "About" page with a banner and collapsible sections for additional information.
+ * Uses data-driven sections to render content dynamically.
+ *
+ * @returns {JSX.Element} The "About" page content.
+ */
 const About = () => {
     return (
         <>

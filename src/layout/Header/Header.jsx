@@ -2,6 +2,12 @@ import {NavLink} from "react-router";
 import styles from './Header.module.scss';
 import logo from "../../assets/images/logo.svg";
 
+/**
+ * Renders the header of the application with navigation links and a logo.
+ * Provides navigation to the home page and the "About" page.
+ *
+ * @returns {JSX.Element} The header component.
+ */
 const Header = () => {
     return (
         <header className={styles.header}>

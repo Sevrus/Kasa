@@ -6,6 +6,13 @@ import Rating from "../../components/Rating/Rating.jsx";
 import Collapse from "../../components/Collapse/Collapse.jsx";
 import Loader from "../../components/Loader/Loader.jsx";
 
+/**
+ * Retrieves and displays detailed information about a specific rental.
+ * Includes a slideshow, ratings, host details, tags, description, and equipment.
+ * Handles loading state, errors, and redirects to a 404 page if the rental is not found.
+ *
+ * @returns {JSX.Element} The detailed rental page.
+ */
 const RentalDetails = () => {
     const {id} = useParams();
     const navigate = useNavigate();

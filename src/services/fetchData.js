@@ -1,3 +1,12 @@
+/**
+ * Fetches data from the given URL and handles loading and error states.
+ *
+ * @param {string} url - The URL to fetch data from.
+ * @param {function} [setLoading] - Optional function to set the loading state.
+ * @param {function} [setError] - Optional function to handle error state.
+ * @returns {Promise<object>} The fetched data.
+ * @throws Will throw an error if the fetch request fails.
+ */
 const fetchData = async (url, setLoading, setError) => {
     if (setLoading) setLoading(true);
 

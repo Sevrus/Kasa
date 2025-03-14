@@ -2,6 +2,14 @@ import {useState} from "react";
 import styles from './Slideshow.module.scss';
 import arrow from "../../assets/images/arrow_slideshow.svg";
 
+/**
+ * Renders a slideshow component with navigation buttons and an image counter.
+ * Allows cycling through an array of images, both forward and backward.
+ *
+ * @param {object} props - The properties passed to the component.
+ * @param {string[]} props.pictures - An array of image URLs for the slideshow.
+ * @returns {JSX.Element|null} The slideshow component, or null if no images are provided.
+ */
 const Slideshow = ({pictures}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
