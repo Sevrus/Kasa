@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import fetchData from "../../services/fetchData.js";
 import styles from './Card.module.scss';
 import {useNavigate} from "react-router";
+import Loader from "../Loader/Loader.jsx";
 
 const Card = () => {
     const [datas, setDatas] = useState([]);
@@ -23,7 +24,7 @@ const Card = () => {
 
     }, []);
 
-    if (isLoading) return <p>Loading...</p>;
+    if (isLoading) return <Loader />;
     if (error) return <p>Error: {error}</p>;
 
     const handleCardClick = (rentalId) => {

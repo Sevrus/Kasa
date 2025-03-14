@@ -4,6 +4,7 @@ import fetchData from "../../services/fetchData.js";
 import Slideshow from "../../components/Slideshow/Slideshow.jsx";
 import Rating from "../../components/Rating/Rating.jsx";
 import Collapse from "../../components/Collapse/Collapse.jsx";
+import Loader from "../../components/Loader/Loader.jsx";
 
 const RentalDetails = () => {
     const {id} = useParams();
@@ -30,7 +31,7 @@ const RentalDetails = () => {
             });
     }, [id, navigate]);
 
-    if (isLoading) return <p>Chargement des détails...</p>;
+    if (isLoading) return <Loader />;
     if (error) return <p>Erreur : {error}</p>;
 
 
