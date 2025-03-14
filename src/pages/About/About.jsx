@@ -12,7 +12,7 @@ const About = () => {
                 showOverlay={false}
                 showText={false}
             />
-            <div className="collapse-container">
+            <div className="collapse-about">
             {collapseData.map((item, index) => (
                 <Collapse key={index} {...item} />
             ))}

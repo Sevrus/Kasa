@@ -54,7 +54,7 @@ const RentalDetails = () => {
                     </div>
                 </div>
             </div>
-            <div className="collapse-container">
+            <div className="collapse-rental">
                 <Collapse title="Description" content={rental["description"]} />
                 <Collapse title="Équipements" content={rental["equipments"]} />
             </div>

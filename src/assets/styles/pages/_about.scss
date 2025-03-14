@@ -1,19 +1,19 @@
 @use '../base/mixins' as *;
 
-.collapse-container {
+.collapse-about {
   @include flex(column, null, center);
   gap: 20px;
   margin-bottom: 19px;
 }
 
 @media (min-width: 768px) {
-  .collapse-container {
+  .collapse-about {
     margin-bottom: 29px;
   }
 }
 
 @media (min-width: 992px) {
-  .collapse-container {
+  .collapse-about {
     margin: 0 208px 38px;
   }
 
