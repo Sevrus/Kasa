@@ -13,10 +13,18 @@ import arrow from "../../assets/images/arrow_slideshow.svg";
 const Slideshow = ({pictures}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
+    /**
+     * Function to update the current index to point to the next image in a collection.
+     * Increments the current index by one and loops back to the start when the end of the collection is reached.
+     */
     const nextImage = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % pictures.length);
     };
 
+    /**
+     * Decrements the current index of the pictures collection to display the previous image.
+     * If the current index is at the beginning of the collection, it wraps around to the last image.
+     */
     const prevImage = () => {
       setCurrentIndex((prevIndex) => (prevIndex - 1 + pictures.length) % pictures.length);
     };

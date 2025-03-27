@@ -24,7 +24,7 @@ const fetchData = async (url, setLoading, setError) => {
 
         return data;
     } catch (error) {
-        console.error("Erreur dans fetchData :", error.message || error);
+        console.error("Erreur dans fetchData :", error.message || error);
 
         throw error;
     } finally {

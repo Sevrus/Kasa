@@ -31,13 +31,18 @@ const Card = () => {
 
     }, []);
 
-    if (isLoading) return <Loader />;
+    if (isLoading) return <Loader/>;
     if (error) return <p>Error: {error}</p>;
 
+    /**
+     * Handles the click event when a rental card is selected.
+     * Redirects the user to the rental details page for the specified rental ID.
+     *
+     * @param {string} rentalId - The unique identifier of the rental card that was clicked.
+     */
     const handleCardClick = (rentalId) => {
         navigate(`/rental/${rentalId}`);
     }
-
 
     return (
         <div className={styles["container"]}>

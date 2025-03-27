@@ -15,10 +15,24 @@ const Collapse = ({title, content}) => {
     const [isOpen, setIsOpen] = useState(false);
     const contentRef = useRef(null);
 
+    /**
+     * Toggles the state of the component between open and closed.
+     * This function updates the `isOpen` state by inverting its current value.
+     */
     const handleClick = () => {
         setIsOpen(!isOpen);
     }
 
+    /**
+     * A function that renders content based on its type.
+     * If the provided `content` is an array, it returns a list with each
+     * item in the array rendered as a list item. If `content` is not an array,
+     * it directly returns the `content` as-is.
+     *
+     * @returns {JSX.Element|string} The rendered content. If `content` is an array,
+     * it returns a JSX unordered list with its items. Otherwise, returns the
+     * `content` directly.
+     */
     const renderContent = () => {
         if (Array.isArray(content)) {
             return (
